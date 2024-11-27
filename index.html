@@ -1,13 +1,66 @@
 <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Baneen a lat</title>
-        <link rel="stylesheet" href="estilos.css">
-    </head>
-    <body>
-        <h1>Baneen a lat</h1>
-        <img src="gif.gif" class="gif">
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baneena.lat</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: black;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100%;
+            padding-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        #baneenlatgif {
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer img {
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="/gifs/baneenalat.gif" id="baneenlatgif">
+
+        <img src="" id="baneenalat">
+    </div>
+
+    <div class="footer">
+        <img src="/imgs/king.png" alt="King">
+    </div>
+
+    <script>
+        const r = (min, max) => Math.floor(Math.random() * (max - min) + min);
+        setInterval(() => {
+            baneenalat.src = `/gifs/lat (${r(1, 47)}).gif`
+        }, 1000);
+    </script>
+</body>
 </html>
